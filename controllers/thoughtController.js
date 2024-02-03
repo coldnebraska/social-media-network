@@ -43,6 +43,20 @@ module.exports = {
     }
   },
 
+  async updateThought(req, res) {
+    try {
+      const thought = await Thought.findOneAndUpdate(
+        {_id: req.params.thoughtId},
+        {$set: req.body},
+        { runValidators: true, new: true }
+      )
+
+      res.json(thought)
+    } catch (err) {
+      res.status(500).json(err)
+    }
+  },
+
   async deleteThought(req, res) {
     try {
       const thought = await Thought.findOneAndRemove({ _id: req.params.thoughtId })
