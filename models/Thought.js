@@ -17,7 +17,7 @@ const thoughtSchema = new Schema(
     reactions: [reactionSchema],
     createdAt: {
       type: Date,
-      default: format_date(Date.now),
+      default: Date.now(),
     },
   },
   {
