@@ -1,5 +1,5 @@
 module.exports = {
-    format_date: () => {
-        return Date.now().toDateString();
+    format_date: (date) => {
+        return new Date(date).toUTCString()
     }
 }
