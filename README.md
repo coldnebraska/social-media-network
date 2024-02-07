@@ -13,7 +13,8 @@ This project is the back-end server of a social network platform. It uses Expres
 This application can be downloaded as a zip file or cloned from github.
 
 ## Usage
-This application is only a back-end application and can be started by running "npm install" to install the required dependencies, followed by "npm run start" to start the server. To test/use the endpoints of the server, a program like Insomnia is needed.
+This application is only a back-end application and can be started by running "npm install" to install the required dependencies, followed by "npm run start" to start the server. To test/use the endpoints of the server, a program like Insomnia is needed. A walkthrough video is also provided below.
+https://drive.google.com/file/d/1j21y6WrOSXQxC_0mBIC39AQLhZxrk8aA/view 
 
 ## License
 MIT License
