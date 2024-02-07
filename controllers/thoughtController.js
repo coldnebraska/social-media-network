@@ -1,4 +1,4 @@
-const { User, Thought, Reaction } = require('../models')
+const { User, Thought } = require('../models')
 
 module.exports = {
   async getThoughts(req, res) {
@@ -63,18 +63,6 @@ module.exports = {
 
       if (!thought) {
         return res.status(404).json({ message: 'No such thought exists' })
-      }
-
-      const reaction = await Reaction.findOneAndUpdate(
-        { thoughts: req.params.thoughtId },
-        { $pull: { thoughts: req.params.thoughtId } },
-        { new: true }
-      )
-
-      if (!reaction) {
-        return res.status(404).json({
-          message: 'Thought deleted, but no reactions found',
-        })
       }
 
       res.json({ message: 'Thought successfully deleted' })
